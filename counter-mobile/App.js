@@ -5,19 +5,16 @@ import Config from 'react-native-config';
 export default class App extends React.Component {
 	
   _onPressButton() {
-	  
-   // fetch(Config.SERVER_URL+'/click', {
-//	method: 'POST',
-	// mode: 'no-cors'
-//	}).catch(function(error) {
-//console.log('There has been a problem with your fetch operation: ' + error.message);
-  // throw error;
- //});
-  }ASDSADSADSA
-  render() {aDSASD
-	  console.log(Config.SERVER_URL);
-	  console.log(Expo.Constants.manifest.server);
-	  console.log(process.env['SERVER_URL']);
+	 
+    fetch(Config.SERVER_URL+'/click', {
+    method: 'POST',
+	 mode: 'no-cors'
+	}).catch(function(error) {
+		concole.log(error);
+	 throw error;
+ });
+  }
+  render() {
     return (
     <View style={styles.container}>
         <View style={styles.buttonContainer}>
