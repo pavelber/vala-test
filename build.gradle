@@ -13,6 +13,8 @@ group 'com.vala'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'kotlin'
+apply plugin: 'application'
+mainClassName = "com.vala.pavel.Start"
 
 repositories {
     mavenCentral()
