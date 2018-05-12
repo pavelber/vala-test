@@ -10,7 +10,7 @@ export default class App extends React.Component {
     method: 'POST',
 	 mode: 'no-cors'
 	}).catch(function(error) {
-		concole.log(error);
+		console.log(error);
 	 throw error;
  });
   }
