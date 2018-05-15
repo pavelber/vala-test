@@ -32,6 +32,7 @@ class CounterDaoImpl(vertx: Vertx, config: Configuration) : CounterDao {
                         response.end(counter.toString())
                     } else
                         response.statusCode = 500
+                    connection.close()
                 })
             } else {
                 response.statusCode = 500
@@ -50,6 +51,7 @@ class CounterDaoImpl(vertx: Vertx, config: Configuration) : CounterDao {
                     } else
                         response.statusCode = 500
                 })
+                connection.close()
             } else {
                 response.statusCode = 500
             }
@@ -71,6 +73,7 @@ class CounterDaoImpl(vertx: Vertx, config: Configuration) : CounterDao {
                         })
                     } else {} // DB already exists
                 })
+                connection.close()
             } else {
                throw Error("Can't init db")
             }
